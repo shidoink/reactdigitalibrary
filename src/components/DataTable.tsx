@@ -16,7 +16,7 @@ const columns: GridColDef[]= [
 
 function DataTable () {
     const [open, setOpen] = useState(false);
-    const {TitleData, getData}= useGetData();
+    const {titleData, getData}= useGetData();
     const [selectionModel, setSelectionModel]=useState<string[]>([])
 
 
@@ -71,7 +71,7 @@ const deleteData= ()=>{
             <div className={ open ? "hidden": "container mx-10 my-5 flex flex-col"}
                 style = {{height: 400, width: '100%'}}>
                     <h2 className=" p-3 bg-slate-300 my-2 rounded ">Inventory</h2>
-                    <DataGrid rows= {TitleData} columns={columns} pageSizeOptions= {[10]}
+                    <DataGrid rows= {titleData} columns={columns} pageSizeOptions= {[10]}
                     checkboxSelection={true}
                     onRowSelectionModelChange={(item:any)=>{
                         setSelectionModel(item)
