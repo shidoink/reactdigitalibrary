@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, useNavigate } from 'react-router-dom'
 //import routes from './config/routes'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
@@ -21,7 +21,7 @@ function App() {
   
 
   return (
-   <BrowserRouter>
+   <HashRouter>
    <Navbar/>
    <Provider store = {store}>
     
@@ -34,7 +34,7 @@ function App() {
     </Routes>
     </Provider>
 
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
